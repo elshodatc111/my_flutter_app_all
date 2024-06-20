@@ -6,7 +6,6 @@ import 'data/currency.dart';
 
 class PageCurrency extends StatefulWidget {
   const PageCurrency({super.key});
-
   @override
   State<PageCurrency> createState() => _PageCurrencyState();
 }
@@ -23,6 +22,7 @@ class _PageCurrencyState extends State<PageCurrency> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: Text("Valyuta"),),
       body: SafeArea(
           child: FutureBuilder(
         future: getDataFromApi(),

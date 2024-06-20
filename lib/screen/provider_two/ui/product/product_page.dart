@@ -10,16 +10,7 @@ class ProductPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var myProvider = context.read<ProductViewModel>();
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.blue,
-        centerTitle: true,
-        title: const Text(
-          "Product Page",
-          style: TextStyle(color: Colors.white),
-        ),
-      ),
-      body: Consumer<ProductViewModel>(
+    return Consumer<ProductViewModel>(
         builder: (context, myProvider, child) {
           if (myProvider.isLoading) {
             return const Center(
@@ -36,12 +27,6 @@ class ProductPage extends StatelessWidget {
             return const Text("Data yoq");
           }
         },
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          context.read<ProductViewModel>().getAppProduct();
-        },
-      ),
     );
   }
 
