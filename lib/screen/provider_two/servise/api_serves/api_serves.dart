@@ -9,6 +9,16 @@ class ApiServes{
       List products = response.data.map((e)=>ProductModel.fromJson(e)).toList();
       return products;
     }
+  }
+
+  Future getSingleProduct() async{
+    Dio dio = Dio();
+    Response response = await dio.get("https://fakestoreapi.com/products/");
+    if(response.statusCode==200){
+      List products = response.data.map((e)=>ProductModel.fromJson(e)).toList();
+      print(products);
+      return products;
+    }
 
   }
 }

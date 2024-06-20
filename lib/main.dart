@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:me_youtube_aplication/screen/counter/counter_view_model.dart';
+import 'package:me_youtube_aplication/screen/provider_two/ui/heards/heards_pages.dart';
 import 'package:me_youtube_aplication/screen/provider_two/ui/product/product_page.dart';
 import 'package:me_youtube_aplication/screen/provider_two/view_model/product_view_model.dart';
 import 'package:provider/provider.dart';
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
     return const GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: ProductPage(),
+      home: HeardsPages(),
     );
   }
 }

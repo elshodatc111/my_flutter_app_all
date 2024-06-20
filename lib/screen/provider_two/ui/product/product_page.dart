@@ -44,4 +44,6 @@ class ProductPage extends StatelessWidget {
       ),
     );
   }
+
 }
+
