@@ -31,11 +31,7 @@ class MyApp extends StatelessWidget {
     return const GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: Scaffold(
-        body: ProductPage()
-      ),
+      home: ProductPage(),
     );
   }
 }
-
-
